@@ -198,7 +198,7 @@ function printQuote() {
 //This function refreshes the quote after a set time.
 
 function refreshQuote() {
-  let reloadQuote = setInterval(printQuote, 5000);
+  let reloadQuote = setInterval(printQuote, 10000);
 
   return reloadQuote;
 }
