@@ -171,7 +171,6 @@ function randomBackGroundColor() {
 function printQuote() {
   let rQuote = getRandomQuote();
   let pageColor = randomBackGroundColor();
-  let timedQuote = refreshQuote();
 
   string = "";
   string += '<p class="quote">' + rQuote.quote + "</p>";
@@ -198,10 +197,12 @@ function printQuote() {
 //This function refreshes the quote after a set time.
 
 function refreshQuote() {
-  let reloadQuote = setInterval(printQuote, 10000);
+  let reloadQuote = window.setInterval(printQuote, 10000);
 
   return reloadQuote;
 }
+
+refreshQuote();
 
 //Event listener to respond to when the button on the page is clicked.
 
